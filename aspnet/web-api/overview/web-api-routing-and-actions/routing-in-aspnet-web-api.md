@@ -19,21 +19,21 @@ ms.locfileid: "41836182"
 ====================
 durch [Mike Wasson](https://github.com/MikeWasson)
 
-In diesem Artikel wird beschrieben, wie ASP.NET Web-API die HTTP-Anforderungen an Controller weitergeleitet.
+In diesem Artikel wird beschrieben, wie ASP.NET Web-API die HTTP-Anforderungen an den Controller weiterleitet.
 
 > [!NOTE]
-> Wenn Sie mit ASP.NET MVC vertraut sind, ist ein routing der Web-API-MVC-routing sehr ähnlich. Der Hauptunterschied besteht darin, dass die Web-API die HTTP-Methode, nicht den URI-Pfad verwendet, um die Aktion auswählen. Sie können auch die MVC-Stil-routing in Web-API verwenden. In diesem Artikel werden keine Kenntnisse von ASP.NET MVC vorausgesetzt.
+> Wenn Sie mit ASP.NET MVC vertraut sind, ist ein WebApi-Routing dem Web-API-MVC-Routing sehr ähnlich. Der Hauptunterschied besteht darin, dass die Web-API die HTTP-Methode, nicht den URI-Pfad verwendet, um die Aktion auszuwählen. Sie können auch das Routing im MVC-Stil in Web-API Projekten verwenden. In diesem Artikel werden keine Kenntnisse von ASP.NET MVC vorausgesetzt.
 
 
 ## <a name="routing-tables"></a>Routingtabellen
 
-In ASP.NET Web-API eine *Controller* ist eine Klasse, die HTTP-Anforderungen verarbeitet. Die öffentlichen Methoden des Controllers aufgerufen werden *Aktionsmethoden* oder einfach *Aktionen*. Wenn die Web-API-Framework eine Anforderung empfängt, leitet sie die Anforderung mit einer Aktion.
+In einem ASP.NET Web-API Projekt ist ein *Controller* eine Klasse, die HTTP-Anforderungen verarbeitet. Die öffentlichen Methoden des Controllers werden *Aktionsmethoden* oder einfach *Aktionen* genannt. Wenn das Web-API-Framework eine Anforderung empfängt, leitet es diese zu einer Aktion weiter.
 
-Um zu bestimmen, welche Aktion aufrufen, das Framework verwendet eine *Routingtabelle*. Die Visual Studio-Projektvorlage für Web-API erstellt eine Standardroute:
+Um zu bestimmen, welche Aktion aufgerufen werden soll, verwendet das Framework eine *Routingtabelle*. Die Visual Studio-Projektvorlage für Web-APIs erstellt eine Standardroute:
 
 [!code-csharp[Main](routing-in-aspnet-web-api/samples/sample1.cs)]
 
-Diese Route wird definiert, in der Datei "WebApiConfig.cs", die in der App platziert wird\_Anfangsverzeichnis:
+Diese Route wird in der Datei "WebApiConfig.cs" definiert, die sich im Verzeichnis App_Start befindet:
 
 ![](routing-in-aspnet-web-api/_static/image1.png)
 
