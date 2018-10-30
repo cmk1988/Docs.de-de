@@ -37,13 +37,13 @@ Diese Route wird in der Datei "WebApiConfig.cs" definiert, die sich im Verzeichn
 
 ![](routing-in-aspnet-web-api/_static/image1.png)
 
-Weitere Informationen zu den **WebApiConfig** Klasse, finden Sie unter [Konfigurieren von ASP.NET Web-API](../advanced/configuring-aspnet-web-api.md).
+Weitere Informationen zur **WebApiConfig** Klasse, finden Sie unter [Konfigurieren von ASP.NET Web-API](../advanced/configuring-aspnet-web-api.md).
 
-Wenn Sie Web-API selbst hosten, müssen Sie die Routingtabelle festlegen, direkt auf die **HttpSelfHostConfiguration** Objekt. Weitere Informationen finden Sie unter [selbst hosten einer Web-API](../older-versions/self-host-a-web-api.md).
+Falls Sie Web-API selbst hosten möchten, müssen Sie die Routingtabelle direkt auf das **HttpSelfHostConfiguration** Objekt festlegen. Weitere Informationen finden Sie unter [selbst hosten einer Web-API](../older-versions/self-host-a-web-api.md).
 
-Jeder Eintrag in der Routingtabelle enthält eine *routenvorlage*. Die Route-Standardvorlage für Web-API ist &quot;api / {Controller} / {Id}&quot;. In dieser Vorlage &quot;api&quot; ist ein literal OData-Pfadsegment, und klicken Sie auf {Controller} und {Id} Platzhaltervariablen sind.
+Jeder Eintrag in der Routingtabelle enthält eine *routenvorlage*. Die Routen-Standardvorlage für Web-API ist &quot;api / {Controller} / {Id}&quot;. In dieser Vorlage ist &quot;api&quot; ein ausgeschriebenes Pfadsegment, {Controller} und {Id} sind Platzhaltervariablen.
 
-Wenn die Web-API-Framework eine HTTP-Anforderung empfängt, versucht, den URI für eine der routenvorlagen in der Routingtabelle überein. Wenn keine Route entspricht, erhält der Client einen 404-Fehler. Die folgenden URIs entspricht z. B. die Standardroute:
+Wenn das Web-API-Framework eine HTTP-Anforderung empfängt, durchsucht es die URIs der Routenvorlagen in der Routingtabelle nach einer Übereinstimmung. Wenn keine Route passt, erhält der Client einen 404-Fehler. Die folgenden URIs entspricht z. B. der Standardroute:
 
 - / api/contacts
 - /API/Contacts/1
